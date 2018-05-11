@@ -17,7 +17,9 @@
 % \usepackage[utf8]{inputenc} % for a UTF8 editor only
 
 %% EXAMPLE BEGIN -- HOW TO OVERRIDE THE DEFAULT COPYRIGHT STRIP --
-% \copyrightinfo{Permission to make digital or hard copies of all or
+\copyrightinfo{Submitted to UbiComp/ISWC 2018}
+
+%Permission to make digital or hard copies of all or
 % part of this work for personal or classroom use is granted without
 % fee provided that copies are not made or distributed for profit or
 % commercial advantage and that copies bear this notice and the full
@@ -37,35 +39,55 @@
 \def\plaintitle{EyeWear 2018: Second Workshop on EyeWear Computing} \def\plainauthor{First Author, Second Author, Third Author,
   Fourth Author}
 \def\emptyauthor{}
-\def\plainkeywords{Eyewear, HMD, Smart Glasses, Augmented Reality, Activity Recognition}
+\def\plainkeywords{Eyewear, Head-mounted Displays, Smart Glasses, Virtual Reality, Augmented Reality, Activity Recognition, Perception-Aware Computing,
+Human Augmentation}
 \def\plaingeneralterms{Documentation, Standardization}
 
 \title{\plaintitle}
 
-\numberofauthors{6}
+\numberofauthors{7}
 \author{%
   \alignauthor{
-  \textbf{}\\
-    \affaddr{Max Planck for Informatics}\\
-    \affaddr{Saarbr\"ucken, Germany}\\
-    \email{bulling@mpi-inf.mpg.de}}
-  		\alignauthor{%
-  \textbf{Kai Kunze}\\
+  \textbf{Benjamin Tag}\\
     \affaddr{Keio University}\\
     \affaddr{Yokohama, Japan}\\
-    \email{kai@kmd.keio.ac.jp}}\vfil 
+    \email{tagbenja@kmd.keio.ac.jp}}
+  \alignauthor{%
+  \textbf{Olivier Augereau}\\
+    \affaddr{Osaka Prefecture University}\\
+    \affaddr{Osaka, Japan}\\
+    \email{augereau.o@gmail.com}}\vfil 
   \alignauthor{
-  \textbf{Ozan Cakmakci}\\
+ \textbf{Christian Holz}\\
+    \affaddr{Microsoft Research}\\
+    \affaddr{Redmond, US}\\
+    \email{cholz@microsoft.com}
+    }
+  \alignauthor{ 
+   \textbf{Ozan Cakmakci}\\
     \affaddr{Google Inc.}\\
     \affaddr{Mountain View, US}\\
     \email{ozancakmakci@google.com}
+ }\vfil
+  \alignauthor{
+  \textbf{Yuji Uema}\\
+    \affaddr{J!NS Inc.}\\
+    \affaddr{Tokyo, Japan}\\
+    \email{}
     }
   \alignauthor{
-  \textbf{James M. Rehg}\\
-    \affaddr{Georgia Institute of Technology}\\
-    \affaddr{Atlanta, US}\\
-    \email{rehg@cc.gatech.edu}}\vfil
+  \textbf{Paul Lukowicz}\\
+    \affaddr{DFKI}\\
+    \affaddr{Kaiserslautern, Germany}\\
+    \email{}}\vfil
+      \alignauthor{
+  \textbf{Kai Kunze}\\
+    \affaddr{Keio University}\\
+    \affaddr{Yokohama, Japan}\\
+    \email{kai.kunze@gmail.com}
+    }\vfil
 }
+
 
 
 
@@ -100,7 +122,7 @@
 
 % Do not change the page size or page settings.
 \begin{abstract}
-Smart glasses, head-worn eye trackers, egocentric vision devices, and similar "smart eyewear" have recently emerged as interesting research platforms for a range of research fields, including human-computer interaction, ubiquitous computing, computer vision, and social sciences. The proposed workshop will bring together researchers from a wide range of computing disciplines, such as mobile and ubiquitous computing, eye tracking, optics, computer vision, human vision and perception, privacy and security, usability, as well as systems research.
+Virtual/augmented reality headsets, smart sensing glasses and  and similar "smart eyewear" have recently emerged as commercial products and provide an interesting research platform for a range of research fields, including human-computer interaction, ubiquitous computing, pervasive sensing, and social sciences. The proposed workshop will bring together researchers from a wide range of computing disciplines, such as mobile and ubiquitous computing, eye tracking, optics, computer vision, human vision and perception, usability, as well as systems and copororate research.
 \end{abstract}
 
 \keywords{\plainkeywords}
@@ -109,8 +131,12 @@ Smart glasses, head-worn eye trackers, egocentric vision devices, and similar "s
   HCI)}{Miscellaneous}
 
 \section{Introduction}
+We often believe the face to be a reflection of our personality or character. It holds most of our senses - sight, hearing, taste, smell and is used to express affect. Head and face seem to be an obvious choice to place sensors and actuators to track user's activities and provide interaction possibilities.
 
-Computing devices worn on the human body have a long history in academic and industrial research, most importantly in wearable computing, mobile eye tracking, and mobile mixed and augmented reality.  In contrast to traditional computing systems, body-worn devices are always with the user and therefore have the potential of perceiving the world and reasoning about it from the user’s point of view. At the same time, given that on-body computing is subject to ever-changing usage conditions, on-body computing also poses unique research challenges. 
+The head and face would thus seem to be an obvious location to place sensors to track user activity and state, in particular with respect to emotion, cognitive activity/state, interaction, and nutrition. However, for a long time, head/face based wearables have been restricted to special purpose, niche applications. Examples are medical indications (glasses, hearing aids), safety (helmets, safety goggles), and constrained, highly specialized workplace applications (e.g. Head Mounted Display for Fireman or emergency response teams in general). In essence, because the face is so important to humans, under every day circumstances people are highly sensitive to ergonomic and social acceptance aspects of anything placed there. It is telling that in her seminal study on  ergonomic device placement constraints for wearables [2] Gemperle has not even  considered the head as a location to investigate
+
+The face is often considered to be the window to our personality. It hosts our key senses (sight, hearing, taste, smell), has a major role in expressing emotions (even involuntarily), it is our communication center, it is where food, water, and air enter our bodies.  
+Computing devices worn on the human body have a long history in academic and industrial research, most importantly in wearable computing, mobile eye tracking, and mobile mixed and augmented reality.  In contrast to traditional computing systems, body-worn devices are always with the user and therefore have the potential of perceiving the world and reasoning about it from the userâs point of view. At the same time, given that on-body computing is subject to ever-changing usage conditions, on-body computing also poses unique research challenges. 
 
 This is particularly true for devices worn on the head. As humans receive most of their sensory input via the head, it is a particularly interesting body location for simultaneous sensing and interaction as well as cognitive assistance. Early ego- centric vision devices were rather bulky, expensive, and their battery lifetime severely limited their use to short durations of time\cite{cakmakci2006head}. Building on existing work in wearable computing, recent commercial egocentric vision devices and mobile eye trackers, such as Google Glass, SMI ETG, and J!NS meme, pave the way for a new generation of "smart eyewear" that are light-weight, low-power, convenient to use, and increasingly look like ordinary glasses\cite{bulling2014cognition,kliegl2006tracking}. This last characteristic is particularly important as it makes these devices attractive for the general public, thereby holding the potential to provide a research and product platform of unprecedented scale, quality, and flexibility.
 While hearing aids and mobile headsets are widely accepted as head-worn devices, users in public spaces often consider novel head-attached sensors and devices as uncomfortable, irritating, or stigmatizing. Yet, given a number of recent technological, we believe eyewear computing will soon transition into mainstream technology and prominent research field:
@@ -123,7 +149,6 @@ While hearing aids and mobile headsets are widely accepted as head-worn devices,
 \end{enumerate}
 
 \section{Topics}
-
 Smart Eyewear can be a powerful enabling technology for a broad range of computer science fields. We will tackle the following research problems and topics during the seminar split into six categories tackling state of the art (topics 2 and 3), future opportunities (topics 1, 2 and 6), and potential issues and perils (topics 4 and 5).
 \begin{enumerate}
   \item {\bf Discovering suitable application cases:} On the one side we have the fast miniaturization and integration of sensing/interaction devices into an even smaller form factor, on the other side the activity recognition  and computer vision researcher succeed in detecting and distinguishing ever more complex tasks and situations. The question comes up which activities are the most useful for application cases that have the most impact on society. What are the best application fields to apply smart eyewear for the best impact?
@@ -143,7 +168,7 @@ Smart Eyewear can be a powerful enabling technology for a broad range of compute
 We propose a one-day workshop with presentation sessions in the morning, development of scenarios in the early afternoon, and group discussions on fundamental challenges in the late afternoon. In the following we describe pre-workshop preparations and the post-workshop follow up.
 
 \subsection{Presentations}
-The workshop will start with an introduction and the keynotes to the workshop topic (12:00-12:30), followed by short introductory presentations to get familiar with the participants and the topics they are working on. Authors will get 5 minutes to present their work keeping presentations short and focused. While listening to the presentations, all participants will be asked to take notes on provided Post-Its, which we will share on a large whiteboard in order to prepare for the discussion sessions.
+The workshop will start with an introduction and the keynotes to the workshop topic (10:00-12:30), followed by short introductory presentations to get familiar with the participants and the topics they are working on. Authors will get 5 minutes to present their work keeping presentations short and focused. While listening to the presentations, all participants will be asked to take notes on provided Post-Its, which we will share on a large whiteboard in order to prepare for the discussion sessions.
 The presentation session will be broken into two parts with a short coffee break in between. This will allow enough time to discuss different ideas coming out from the presentations.
 
 \subsection{Scenario Development}
@@ -157,14 +182,16 @@ At the workshop organizers will take pictures/document the outcome of the analys
 
 \section{Organizers}
 
-{\bf Andreas Bulling} is an independent research group leader at the Max Planck Institute for Informatics and the Cluster of Excellence on Multimodal Computing and Interaction at Saarland University, Germany, where he heads the Perceptual User Interfaces Group. Before, he was a Feodor-Lynen and Marie Curie Research Fellow in the Computer Laboratory at the University of Cambridge and a postdoctoral research associate at Lancaster University. He received his MSc. in Computer Science from the Technical University of Karlsruhe and holds a PhD in Information Technology and Electrical Engineering from ETH Zurich.
+{\bf Benjamin Tag} is a researcher at Keio Media Design working on ...
 
-{\bf Kai Kunze} works as an associate project professor at Keio Media Design, Keio University. Beforehand, he held an assistant professorship at Osaka Prefecture University. He received a Summa Cum Laude for his phD the- sis, University Passau. He was visting researcher at the MIT Media Lab. His work experience includes internships at the Palo Alto Research Center (PARC), Sunlabs Europe and the Research Department of the German Stock Exchange. His major research contributions are in pervasive computing, especially in sensing, physical and cognitive activity recognition. Recently, he focuses on tracking knowledge acquisition activities, especially reading.
+
+{\bf Oliver Augereau} is an Assistant Professor  ...
 
 {\bf Ozan Cakmakci} is a lead optical research and development engineer focusing on future optical architectures for Google Glass at Google[x]. His research interests include optical system design, freeform optics, kernel methods, gradient index optics, as well as diffractive and holographic optics. He holds a PhD in Optics from Center for Research and Education in Optics and Lasers (CREOL), University of Central Florida. He has worked or interned at Optical Research Associates, Synopsys Optical Solutions Group, Starlab Research, Canon Research Labs, and BMW Research and Development.
 
 
-{\bf James M. Rehg} (pronounced "ray") is a Professor in the School of Interactive Computing at the Georgia Institute of Technology, where he is co-director of the Computational Perception Lab (CPL) and Director of the Center for Behavioral Imaging. He received his Ph.D. from CMU in 1995 and worked at the Cambridge Research Lab of DEC (and then Compaq) from 1995-2001, where he managed the computer vision research group. He received an NSF CAREER award in 2001 and a Raytheon Faculty Fellowship from Georgia Tech in 2005. He and his students have received a number of best paper awards, including best student paper awards at ICML 2005 and BMVC 2010, and a 2013 Method of the Year Award from the journal Nature Methods. Dr. Rehg serves on the Editorial Board of the Intl. J. of Computer Vision, and he served as the Program co-Chair for ACCV 2012 and General co-Chair for CVPR 2009, and will serve as Program co-Chair for CVPR 2017. He has authored more than 100 peer-reviewed scientific papers and holds 25 issued US patents. His research interests include computer vision, medical imaging, robot perception, machine learning, and pattern recognition.
+{\bf Kai Kunze} works as an associate project professor at Keio Media Design, Keio University. Beforehand, he held an assistant professorship at Osaka Prefecture University. He received a Summa Cum Laude for his phD the- sis, University Passau. He was visting researcher at the MIT Media Lab. His work experience includes internships at the Palo Alto Research Center (PARC), Sunlabs Europe and the Research Department of the German Stock Exchange. His major research contributions are in pervasive computing, especially in sensing, physical and cognitive activity recognition. Recently, he focuses on tracking knowledge acquisition activities, especially reading.
+
 
 \section{Acknowledgements}
 This workshop is based on a Dagstuhl Seminar on EyeWear Computing No. 16042 http://www.dagstuhl.de/16042 . We want to thank the Dagstuhl Team for providing a stimulating environment for research discussions.
