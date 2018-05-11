@@ -1,0 +1,55 @@
+This is BibTeX, Version 0.99d (TeX Live 2016)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: /Users/kai/Drive/action/eyewear2018/eyewear-proposal/.texpadtmp/main.aux
+The style file: ../SIGCHI-Reference-Format.bst
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Database file #1: ../sample.bib
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Warning--can't use both volume and number fields in bodine2003effects
+Warning--empty publisher in bodine2003effects
+Warning--empty address in bodine2003effects
+Warning--empty publisher in kunze2015quantifying
+Warning--empty address in kunze2015quantifying
+You've used 7 entries,
+            5283 wiz_defined-function locations,
+            1265 strings with 15367 characters,
+and the built_in function-call counts, 7338 in all, are:
+= -- 1095
+> -- 250
+< -- 1
++ -- 81
+- -- 93
+* -- 460
+:= -- 738
+add.period$ -- 35
+call.type$ -- 7
+change.case$ -- 51
+chr.to.int$ -- 7
+cite$ -- 12
+duplicate$ -- 592
+empty$ -- 419
+format.name$ -- 114
+if$ -- 1906
+int.to.chr$ -- 1
+int.to.str$ -- 0
+missing$ -- 30
+newline$ -- 81
+num.names$ -- 42
+pop$ -- 231
+preamble$ -- 1
+purify$ -- 79
+quote$ -- 0
+skip$ -- 165
+stack$ -- 0
+substring$ -- 537
+swap$ -- 65
+text.length$ -- 1
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 63
+warning$ -- 5
+while$ -- 52
+width$ -- 0
+write$ -- 124
+(There were 5 warnings)

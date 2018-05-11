@@ -1,0 +1,87 @@
+%%% -*-BibTeX-*-
+%%% Do NOT edit. File created by BibTeX with style
+%%% ACM-Reference-Format-Journals [18-Jan-2012].
+
+\begin{thebibliography}{00}
+
+%%% ====================================================================
+%%% NOTE TO THE USER: you can override these defaults by providing
+%%% customized versions of any of these macros before the \bibliography
+%%% command.  Each of them MUST provide its own final punctuation,
+%%% except for \shownote{}, \showDOI{}, and \showURL{}.  The latter two
+%%% do not use final punctuation, in order to avoid confusing it with
+%%% the Web address.
+%%%
+%%% To suppress output of a particular field, define its macro to expand
+%%% to an empty string, or better, \unskip, like this:
+%%%
+%%% \newcommand{\showDOI}[1]{\unskip}   % LaTeX syntax
+%%%
+%%% \def \showDOI #1{\unskip}           % plain TeX syntax
+%%%
+%%% ====================================================================
+
+\ifx \showCODEN    \undefined \def \showCODEN     #1{\unskip}     \fi
+\ifx \showDOI      \undefined \def \showDOI       #1{{\tt DOI:}\penalty0{#1}\ }
+  \fi
+\ifx \showISBNx    \undefined \def \showISBNx     #1{\unskip}     \fi
+\ifx \showISBNxiii \undefined \def \showISBNxiii  #1{\unskip}     \fi
+\ifx \showISSN     \undefined \def \showISSN      #1{\unskip}     \fi
+\ifx \showLCCN     \undefined \def \showLCCN      #1{\unskip}     \fi
+\ifx \shownote     \undefined \def \shownote      #1{#1}          \fi
+\ifx \showarticletitle \undefined \def \showarticletitle #1{#1}   \fi
+\ifx \showURL      \undefined \def \showURL       #1{#1}          \fi
+
+\bibitem{amft2015making}
+{Oliver Amft}, {Florian Wahl}, {Shoya Ishimaru}, {and} {Kai Kunze}. 2015.
+\newblock \showarticletitle{Making regular eyeglasses smart}.
+\newblock {\em IEEE Pervasive Computing\/} {14}, 3 (2015), 32--43.
+\newblock
+
+
+\bibitem{bodine2003effects}
+{Kerry Bodine} {and} {Francine Gemperle}. 2003.
+\newblock \showarticletitle{Effects of functionality on perceived comfort of
+  wearables}. In {\em ISWC 2003}, Vol. 1530. 17--00.
+\newblock
+
+
+\bibitem{bulling2014cognition}
+{Andreas Bulling} {and} {Thorsten~O Zander}. 2014.
+\newblock \showarticletitle{Cognition-aware computing}.
+\newblock {\em Pervasive Computing, IEEE\/} {13}, 3 (2014), 80--83.
+\newblock
+
+
+\bibitem{cakmakci2006head}
+{Ozan Cakmakci} {and} {Jannick Rolland}. 2006.
+\newblock \showarticletitle{Head-worn displays: a review}.
+\newblock {\em Display Technology, Journal of\/} {2}, 3 (2006), 199--216.
+\newblock
+
+
+\bibitem{kliegl2006tracking}
+{Reinhold Kliegl} {and} {et al}. 2006.
+\newblock \showarticletitle{Tracking the mind during reading}.
+\newblock {\em Journal of experimental psychology\/} {135}, 1 (2006), 12.
+\newblock
+
+
+\bibitem{kuhn2016gphysics}
+{Jochen Kuhn}, {Paul Lukowicz}, {and} {al et.} 2016.
+\newblock \showarticletitle{gPhysics - Using Smart Glasses for Head-Centered,
+  Context-Aware Learning in Physics Experiments}.
+\newblock {\em IEEE Transactions on Learning Technologies\/} {9}, 4 (2016),
+  304--317.
+\newblock
+
+
+\bibitem{kunze2015quantifying}
+{Kai Kunze}, {Katsutoshi Masai}, {Masahiko Inami}, {{\"O}mer Sacakli}, {Marcus
+  Liwicki}, {Andreas Dengel}, {Shoya Ishimaru}, {and} {Koichi Kise}. 2015.
+\newblock \showarticletitle{Quantifying reading habits: counting how many words
+  you read}. In {\em UbiComp 2015}. ACM, 87--96.
+\newblock
+
+
+\end{thebibliography}
