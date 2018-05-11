@@ -1,2 +1,3 @@
 ./texpad*
-
+./.texpad*
+*texpad*
