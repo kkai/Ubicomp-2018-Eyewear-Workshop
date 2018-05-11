@@ -1,0 +1,182 @@
+\documentclass{sigchi-ext}
+% Please be sure that you have the dependencies (i.e., additional
+% LaTeX packages) to compile this example.
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+\usepackage[scaled=.92]{helvet} % for proper fonts
+\usepackage{graphicx} % for EPS use the graphics package instead
+\usepackage{balance}  % for useful for balancing the last columns
+\usepackage{booktabs} % for pretty table rules
+\usepackage{ccicons}  % for Creative Commons citation icons
+\usepackage{ragged2e} % for tighter hyphenation
+
+% Some optional stuff you might like/need.
+% \usepackage{marginnote} 
+% \usepackage[shortlabels]{enumitem}
+% \usepackage{paralist}
+% \usepackage[utf8]{inputenc} % for a UTF8 editor only
+
+%% EXAMPLE BEGIN -- HOW TO OVERRIDE THE DEFAULT COPYRIGHT STRIP --
+% \copyrightinfo{Permission to make digital or hard copies of all or
+% part of this work for personal or classroom use is granted without
+% fee provided that copies are not made or distributed for profit or
+% commercial advantage and that copies bear this notice and the full
+% citation on the first page. Copyrights for components of this work
+% owned by others than ACM must be honored. Abstracting with credit is
+% permitted. To copy otherwise, or republish, to post on servers or to
+% redistribute to lists, requires prior specific permission and/or a
+% fee. Request permissions from permissions@acm.org.\\
+% {\emph{CHI'14}}, April 26--May 1, 2014, Toronto, Canada. \\
+% Copyright \copyright~2014 ACM ISBN/14/04...\$15.00. \\
+% DOI string from ACM form confirmation}
+%% EXAMPLE END
+
+% Paper metadata (use plain text, for PDF inclusion and later
+% re-using, if desired).  Use \emtpyauthor when submitting for review
+% so you remain anonymous.
+\def\plaintitle{EyeWear 2018: Second Workshop on EyeWear Computing} \def\plainauthor{First Author, Second Author, Third Author,
+  Fourth Author}
+\def\emptyauthor{}
+\def\plainkeywords{Eyewear, HMD, Smart Glasses, Augmented Reality, Activity Recognition}
+\def\plaingeneralterms{Documentation, Standardization}
+
+\title{\plaintitle}
+
+\numberofauthors{4}
+\author{%
+  \alignauthor{
+  \textbf{Andreas Bulling}\\
+    \affaddr{Max Planck for Informatics}\\
+    \affaddr{Saarbr\"ucken, Germany}\\
+    \email{bulling@mpi-inf.mpg.de}}
+  		\alignauthor{%
+  \textbf{Kai Kunze}\\
+    \affaddr{Keio University}\\
+    \affaddr{Yokohama, Japan}\\
+    \email{kai@kmd.keio.ac.jp}}\vfil 
+  \alignauthor{
+  \textbf{Ozan Cakmakci}\\
+    \affaddr{Google Inc.}\\
+    \affaddr{Mountain View, US}\\
+    \email{ozancakmakci@google.com}
+    }
+  \alignauthor{
+  \textbf{James M. Rehg}\\
+    \affaddr{Georgia Institute of Technology}\\
+    \affaddr{Atlanta, US}\\
+    \email{rehg@cc.gatech.edu}}\vfil
+}
+
+
+
+% Make sure hyperref comes last of your loaded packages, to give it a
+% fighting chance of not being over-written, since its job is to
+% redefine many LaTeX commands.
+\definecolor{linkColor}{RGB}{6,125,233}
+\hypersetup{%
+  pdftitle={\plaintitle},
+%  pdfauthor={\plainauthor},
+  pdfauthor={\emptyauthor},
+  pdfkeywords={\plainkeywords},
+  bookmarksnumbered,
+  pdfstartview={FitH},
+  colorlinks,
+  citecolor=black,
+  filecolor=black,
+  linkcolor=black,
+  urlcolor=linkColor,
+  breaklinks=true,
+}
+
+% \reversemarginpar%
+
+\begin{document}
+
+\maketitle
+
+% Uncomment to disable hyphenation (not recommended)
+% https://twitter.com/anjirokhan/status/546046683331973120
+\RaggedRight{} 
+
+% Do not change the page size or page settings.
+\begin{abstract}
+Smart glasses, head-worn eye trackers, egocentric vision devices, and similar "smart eyewear" have recently emerged as interesting research platforms for a range of research fields, including human-computer interaction, ubiquitous computing, computer vision, and social sciences. The proposed workshop will bring together researchers from a wide range of computing disciplines, such as mobile and ubiquitous computing, eye tracking, optics, computer vision, human vision and perception, privacy and security, usability, as well as systems research.
+\end{abstract}
+
+\keywords{\plainkeywords}
+
+\category{H.5.m}{Information interfaces and presentation (e.g.,
+  HCI)}{Miscellaneous}
+
+\section{Introduction}
+
+Computing devices worn on the human body have a long history in academic and industrial research, most importantly in wearable computing, mobile eye tracking, and mobile mixed and augmented reality.  In contrast to traditional computing systems, body-worn devices are always with the user and therefore have the potential of perceiving the world and reasoning about it from the user’s point of view. At the same time, given that on-body computing is subject to ever-changing usage conditions, on-body computing also poses unique research challenges. 
+
+This is particularly true for devices worn on the head. As humans receive most of their sensory input via the head, it is a particularly interesting body location for simultaneous sensing and interaction as well as cognitive assistance. Early ego- centric vision devices were rather bulky, expensive, and their battery lifetime severely limited their use to short durations of time\cite{cakmakci2006head}. Building on existing work in wearable computing, recent commercial egocentric vision devices and mobile eye trackers, such as Google Glass, SMI ETG, and J!NS meme, pave the way for a new generation of "smart eyewear" that are light-weight, low-power, convenient to use, and increasingly look like ordinary glasses\cite{bulling2014cognition,kliegl2006tracking}. This last characteristic is particularly important as it makes these devices attractive for the general public, thereby holding the potential to provide a research and product platform of unprecedented scale, quality, and flexibility.
+While hearing aids and mobile headsets are widely accepted as head-worn devices, users in public spaces often consider novel head-attached sensors and devices as uncomfortable, irritating, or stigmatizing. Yet, given a number of recent technological, we believe eyewear computing will soon transition into mainstream technology and prominent research field:
+
+\begin{enumerate}
+  \item Increase in storage/battery capacity and computational power allows users to run eyewear computers continuously for more than a day (charging over night) gathering data to enable new types of life-logging applications.
+  \item Miniaturization and integration of sensing, processing, and interaction functionality can enable a wide array of applications from micro-interactions to intelligent wearable assistance.
+  \item Recent advances in real-life tracking of physical and cog- nitive activities (e.g. reading, detection of fatigue, con- centration) are additional enabling technologies for new application fields towards a quantified self for the mind~\cite{kunze2015quantifying}. Smart eyewear and recognizing cognitive states go hand in hand, as naturally most research work in this field requires sensors.
+  \item Cognitive scientists and psychologists have now a better understanding of user behavior and what induces behavior change. Therefore, smart eyewear could help users in achieving behavior change towards their long-term goals.
+\end{enumerate}
+
+\section{Topics}
+
+Smart Eyewear can be a powerful enabling technology for a broad range of computer science fields. We will tackle the following research problems and topics during the seminar split into six categories tackling state of the art (topics 2 and 3), future opportunities (topics 1, 2 and 6), and potential issues and perils (topics 4 and 5).
+\begin{enumerate}
+  \item {\bf Discovering suitable application cases:} On the one side we have the fast miniaturization and integration of sensing/interaction devices into an even smaller form factor, on the other side the activity recognition  and computer vision researcher succeed in detecting and distinguishing ever more complex tasks and situations. The question comes up which activities are the most useful for application cases that have the most impact on society. What are the best application fields to apply smart eyewear for the best impact?
+  \item {\bf Defining sensing and interaction modalities to better understand human behavior:} Driven by the application cases which sensing modalities are the most interesting to be integrated in smart eyewear. What are the important activities to focus on (e.g. fatigue detection, concentration tracking?). Which modalities give us the most insights in human behavior without too high demands on battery and processing power? 
+  \item {\bf Exploring long term physical and cognitive activity sensing for behavior change:} How can we use these real life recordings of physical, physiological and cognitive signals on the head to induce wanted long-term behavior change for users? As we humans usually seek instant gratification (e.g. choosing to eat the cheese cake although wanting to lose weight), we believe that the quality of sensing and interaction possibilities of eyewear computing can enable visualizations, human computer interfaces and smart assistants that help us better understand the long term effects of our behavior. In relation with the sensing and interaction on smart eyewear, what are methods and techniques to help people their goals?
+  \item {\bf Understanding consequences of long-term use:} As we believe eyewear computing provides unique capabilities to change human behavior for the better due to the integration potential of sensors, haptic, audio and optical output devices, we also need to explore potential negative effects of wearing such devices. This ranges from perceptual issues regarding the use of wearable displays (binocular rivalry, vertical and horizontal gaze comfort, instrument myopia, eye strain, accommodation-convergence mismatch) to potential skin irritations during the deployment of electrodes, or other sensors necessary to touch the skin. 
+  \item {\bf Exploring effects on other fields:} Especially when we discuss large scale, long monitoring of cognitive activities, we believe a strong impact on psychology, sociology and cognitive science as eyewear computing can be an enabling technology for them to  become less model and more data driven sciences utilizing real world setups instead of controlled but artificial laboratory settings.
+  \item {\bf Discussing privacy and social implications.} On the one hand, sensing becomes more and more personal. For example our eye gaze contains a lot of very intimate information and it would be very questionable if users are forced to share these signals with large corporations. On the other hand, using transparent wearable capture and access devices might violate the privacy of other people without them even realizing it.
+
+\end{enumerate}
+
+
+
+
+
+\section{ACTIVITIES}
+We propose a one-day workshop with presentation sessions in the morning, development of scenarios in the early afternoon, and group discussions on fundamental challenges in the late afternoon. In the following we describe pre-workshop preparations and the post-workshop follow up.
+
+\subsection{Presentations}
+The workshop will start with an introduction and the keynotes to the workshop topic (12:00-12:30), followed by short introductory presentations to get familiar with the participants and the topics they are working on. Authors will get 5 minutes to present their work keeping presentations short and focused. While listening to the presentations, all participants will be asked to take notes on provided Post-Its, which we will share on a large whiteboard in order to prepare for the discussion sessions.
+The presentation session will be broken into two parts with a short coffee break in between. This will allow enough time to discuss different ideas coming out from the presentations.
+
+\subsection{Scenario Development}
+After the presentation sessions, workshop participants will start developing scenarios in groups. All participants will write notes on Post-Its, which will be added to the Post- Its from the morning session on the whiteboard. In order to sort out the challenges and opportunities for technologies that augment the human mind, we will create an affinity diagram analysis of the Post-Its. Group analysis will start at 15:00 and will end at 15:30.
+
+\subsection{Group Discussion}
+After the group analysis we will have a longer coffee break (15:30-16:00) and then discuss identified challenges and opportunities (16:00-17:00). The organizers will actively inter- act with the audience to stimulate discussion. After that we will summarize key experiences from the workshop and will plan follow up activities (17:00-17:30).
+
+\subsection{Post-Workshop Follow Up}
+At the workshop organizers will take pictures/document the outcome of the analysis and the content on the whiteboard. This will be made available to the workshop participants through a shared Dropbox folder. The participants will be invited to an existing online repository on Zotero where they can share relevant papers to the workshop themes.
+
+\section{Organizers}
+
+{\bf Andreas Bulling} is an independent research group leader at the Max Planck Institute for Informatics and the Cluster of Excellence on Multimodal Computing and Interaction at Saarland University, Germany, where he heads the Perceptual User Interfaces Group. Before, he was a Feodor-Lynen and Marie Curie Research Fellow in the Computer Laboratory at the University of Cambridge and a postdoctoral research associate at Lancaster University. He received his MSc. in Computer Science from the Technical University of Karlsruhe and holds a PhD in Information Technology and Electrical Engineering from ETH Zurich.
+
+{\bf Kai Kunze} works as an associate project professor at Keio Media Design, Keio University. Beforehand, he held an assistant professorship at Osaka Prefecture University. He received a Summa Cum Laude for his phD the- sis, University Passau. He was visting researcher at the MIT Media Lab. His work experience includes internships at the Palo Alto Research Center (PARC), Sunlabs Europe and the Research Department of the German Stock Exchange. His major research contributions are in pervasive computing, especially in sensing, physical and cognitive activity recognition. Recently, he focuses on tracking knowledge acquisition activities, especially reading.
+
+{\bf Ozan Cakmakci} is a lead optical research and development engineer focusing on future optical architectures for Google Glass at Google[x]. His research interests include optical system design, freeform optics, kernel methods, gradient index optics, as well as diffractive and holographic optics. He holds a PhD in Optics from Center for Research and Education in Optics and Lasers (CREOL), University of Central Florida. He has worked or interned at Optical Research Associates, Synopsys Optical Solutions Group, Starlab Research, Canon Research Labs, and BMW Research and Development.
+
+
+{\bf James M. Rehg} (pronounced "ray") is a Professor in the School of Interactive Computing at the Georgia Institute of Technology, where he is co-director of the Computational Perception Lab (CPL) and Director of the Center for Behavioral Imaging. He received his Ph.D. from CMU in 1995 and worked at the Cambridge Research Lab of DEC (and then Compaq) from 1995-2001, where he managed the computer vision research group. He received an NSF CAREER award in 2001 and a Raytheon Faculty Fellowship from Georgia Tech in 2005. He and his students have received a number of best paper awards, including best student paper awards at ICML 2005 and BMVC 2010, and a 2013 Method of the Year Award from the journal Nature Methods. Dr. Rehg serves on the Editorial Board of the Intl. J. of Computer Vision, and he served as the Program co-Chair for ACCV 2012 and General co-Chair for CVPR 2009, and will serve as Program co-Chair for CVPR 2017. He has authored more than 100 peer-reviewed scientific papers and holds 25 issued US patents. His research interests include computer vision, medical imaging, robot perception, machine learning, and pattern recognition.
+
+\section{Acknowledgements}
+This workshop is based on a Dagstuhl Seminar on EyeWear Computing No. 16042 http://www.dagstuhl.de/16042 . We want to thank the Dagstuhl Team for providing a stimulating environment for research discussions.
+
+\balance{} 
+
+\bibliographystyle{SIGCHI-Reference-Format}
+\bibliography{sample}
+
+\end{document}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
